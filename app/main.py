@@ -39,7 +39,7 @@ def feed_animals(animals: list[Animal]) -> int:
     result = 0
     for animal in animals:
         if animal.is_hungry:
-            animal.feed()
-            if animal.feed != 0:
+            fed_amount = animal.feed()
+            if fed_amount != 0:
                 result += animal.appetite
     return result
